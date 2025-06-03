@@ -3,7 +3,17 @@ Aqui temos um programa para gestão de uma academia,assim como estipulado no tem
 
 Funções:
 
+Cadastramento
+
+Adicionar:
+
+Buscar:
+
+Editar:
+
+Excluir:
 
 
+Treinos
 
-Como usar:
+
