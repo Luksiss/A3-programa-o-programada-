@@ -1,0 +1,30 @@
+-- TABELA ALUNOS
+
+CREATE TABLE public.alunos (
+	id_aluno serial4 NOT NULL,
+	nome varchar(50) NOT NULL,
+	cpf varchar(20) NOT NULL,
+	telefone varchar(20) NOT NULL,
+	email varchar(50) NULL,
+	dt_nascimento date NULL,
+	CONSTRAINT pk_id_aluno PRIMARY KEY (id_aluno)
+);
+
+
+-- CRIA TABELA TREINOS
+
+
+CREATE TABLE public.treinos (
+	id_treino serial4 NOT NULL,
+	tipo varchar(30) NOT NULL,
+	duracao int4 NULL,
+	descricao text NOT NULL,
+	fk_id_aluno int4 NOT NULL,
+	data_inicio date NULL,
+	CONSTRAINT pk_id_treino PRIMARY KEY (id_treino)
+);
+
+
+-- public.treinos chaves estrangeiras
+
+ALTER TABLE public.treinos ADD CONSTRAINT fk_id_aluno FOREIGN KEY (fk_id_aluno) REFERENCES public.alunos(id_aluno);
